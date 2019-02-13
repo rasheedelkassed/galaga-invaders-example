@@ -67,8 +67,14 @@ end
 Reflecting on Principle
 -----------------------
 1. What does the OOD promise to give us, as programmers?
+  It promises better readability I suppose.
 2. What does Martin's SOLID acronym stand for? (Just expand the acronym.)
+  Single responsibility, open-closed, Liskov substituition, interface segregation, dependency inversion
 3. True or False: It is our professional responsibility to always spend time designing before writing our code (designing now rather than later).
+  True
 4. In Metz' TRUE acronym, what does the E stand for and what does it mean?
+  The true acronym stands for Transparent, reasonable, usable, exmplary. I believe exmplary means that the code written should usable as a basis for future
+  future additions by your team or you
 5. How does applying SRP naturally lead to good design?
+  It quickly makes code easier to read while also reducing the dependency that the code has on previous code. 
 =end
