@@ -9,10 +9,11 @@ class GalagaInvaders
 
   SCREEN_WIDTH = 800
   SCREEN_HEIGHT = 800
+  
 
-  def initialize
-    @caption = "Galaga Invaders"
-    @ship = Ship.new(SCREEN_WIDTH / 2, HEIGHT - Ship::HEIGHT)
+  def initialize(game_title, ship)
+    @caption = game_title
+    @ship = ship
   end
 
   def update

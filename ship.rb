@@ -15,16 +15,16 @@ class Ship
     @missile_coordinates = []
   end
 
+  def move(direction_to_move)
+    @x_position += direction_to_move
+  end
+  
   def move_left
     move(-MOVE_MULTIPLIER)
   end
 
   def move_right
     move(MOVE_MULTIPLIER)
-  end
-  
-  def move(direction_to_move)
-    @x_position += direction_to_move
   end
 
   def fire_missle
