@@ -7,12 +7,25 @@ class Ship
 
   WIDTH = 100
   HEIGHT = 200
-  MOVE_MULTIPLIER = 5
+  SHIP_MOVE_MULTIPLIER = 5
+  MISSLE_MOVE_MULTIPLIER = -10
 
   def initialize(x_position, y_position)
     @x_position = x_position
     @y_position = y_position
     @missile_coordinates = []
+  end
+  
+  def get_ship_x_position
+    @x_position
+  end
+  
+  def get_ship_y_position
+    @y_position
+  end
+  
+  def get_ship_nose
+    get_ship_x_position, get_ship_y_position - HEIGHT / 2
   end
 
   def move(direction_to_move)
@@ -20,20 +33,20 @@ class Ship
   end
   
   def move_left
-    move(-MOVE_MULTIPLIER)
+    move(-SHIP_MOVE_MULTIPLIER)
   end
 
   def move_right
-    move(MOVE_MULTIPLIER)
+    move(SHIP_MOVE_MULTIPLIER)
   end
 
   def fire_missle
-    @missile_coordinates << [@x_position, @y_position - HEIGHT / 2]
+    @missile_coordinates << [get_ship_nose]
   end
 
   def move_missiles
     @missile_coordinates.each do |missile|
-      missile -= 10
+      missile -= MISSLE_MOVE_MULTIPLIER
     end
   end
 
@@ -43,7 +56,7 @@ class Ship
 
   def draw_missiles
     @missile_coordinates.each do |missile|
-
+	 
     end
   end
 

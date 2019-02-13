@@ -9,6 +9,7 @@ class GalagaInvaders
 
   SCREEN_WIDTH = 800
   SCREEN_HEIGHT = 800
+  GAME_TITLE = "Galaga Invaders"
   
 
   def initialize(game_title, ship)
@@ -42,7 +43,10 @@ class GalagaInvaders
       @ship.fire_missile
     end
   end
+  
+  def get_screen_center
+    SCREEN_WIDTH / 2
+  end
 
 end
-
-GalagaInvaders.new.show
+GalagaInvaders.new(GAME_TITLE, Ship.new(get_screen_center, SCREEN_HEIGHT - Ship::HEIGHT))
