@@ -54,9 +54,14 @@ GalagaInvaders.new.show
 =begin
 Reflecting on Principle
 -----------------------
-1. True or False: Good OO design eliminates dependencies.
+1. True or False: Good OO design eliminates dependencies. 
+	False
 2. Briefly list four ways in which a class that collaborates with another class
    is dependent on it. (For example, one dependency is knowing the other class name.)
+	An object has a dependency if it knows the name of another class, the name of a message that it intends to send
+	to someone other than itself, the arguments that a certain method requires, or the order of those arguements
 3. What are two primary factors to consider when assessing the risk of a dependency?
+	The number of dependencies and the likeilhood of change.
 4. What is Metz's rule of thumb for choosing a dependency direction?
+	A class should be depend on things that change less than they do.
 =end
