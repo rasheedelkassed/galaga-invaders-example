@@ -10,6 +10,14 @@ class Alien
   def initialize
     @location = Vector.new(200, 200)
   end
+  
+  def muzzle_location
+    Vector.new(ship_or_alien.location.x, ship_or_alien.bottom_edge)
+  end
+  
+  def propelent_velocity
+    -10
+  end
 
   def move
   end

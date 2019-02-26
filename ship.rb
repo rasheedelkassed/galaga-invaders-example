@@ -16,6 +16,10 @@ class Ship
   def muzzle_location
     Vector.new(location.x, top_edge)
   end
+  
+  def propelent_velocity
+    10
+  end
 
   def move_left
     move(-DEFAULT_VELOCITY)
